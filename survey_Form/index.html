@@ -1,30 +1,101 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="formStyle.css" media="screen" title="no title">
     <meta charset="utf-8">
     <title>Survey Form</title>
   </head>
   <body>
-    <h1>Survey Questions</h1>
-    <ul>
-      <li>What is your name?</li>
-      <li>What is your gender?
-        <ul>
-          <li>Male</li>
-          <li>Female</li>
-        </ul>
-      </li>
-      <li>What is your password?</li>
-      <li>Check all foods below that you like:
-        <ul>
-          <li>Tacos</li>
-          <li>Fried rice</li>
-          <li>Catfish</li>
-          <li>Sandwiches</li>
-          <li>Burgers</li>
-          <li>Fries</li>
-        </ul>
-      </li>
-    </ul>
+    <div class="row">
+      <div class="col-md-12 wrapper">
+        <form action="submit.php" enctype="multipart/form-data">
+          <label class="title">Survey Questions</label>
+
+          <div class="form-group">
+            <div class="name">
+              <label>What is your name?
+              <input class="form-control" type="text" name="username">
+              </label>
+            </div>
+
+            <div class="gender">
+              <label>What is your gender?
+                <p>
+                  <select class="form-control" name="gender">
+                    <option value="default"></option>
+                    <option value="male">Male</option>
+                    <option value="male">Female</option>
+                  </select>
+                </p>
+                </label>
+            </div>
+
+            <div class="pwd">
+              <label>What is your password?
+              <p>
+                <input class="form-control" type="password" name="pwd">
+              </p>
+              </label>
+            </div>
+
+            <div class="foodCheck">
+              <label>Check all foods below that you like:</label>
+            </div>
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="Tacos" value="">Tacos
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="fried_rice" value="">Fried Rice
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="catfish" value="">Catfish
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="Sandwiches" value="">Sandwiches
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="Burgers" value="">Burgers
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="Fries" value="">Fries
+              </label>
+            </div>
+
+            <div class="OS">
+              <label>Which operating system do you use?
+                <p>
+                  <select class="form-control" name="gender">
+                    <option value="default"></option>
+                    <option value="Windows">Windows</option>
+                    <option value="OSX">OSX</option>
+                    <option value="Linux">Linux</option>
+                    <option value="Plan 9">Plan 9</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </p>
+              </label>
+            </div>
+
+            <label>Do you have any questions?
+              <textarea class="form-control" name="questionForm"></textarea>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
