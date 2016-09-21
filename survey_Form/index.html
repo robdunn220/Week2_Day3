@@ -10,20 +10,21 @@
   <body>
     <div class="row">
       <div class="col-md-12 wrapper">
+
         <form action="submit.php" enctype="multipart/form-data">
           <label class="title">Survey Questions</label>
 
           <div class="form-group">
             <div class="name">
               <label>What is your name?
-              <input class="form-control" type="text" name="username">
+              <input class="form-control" type="text" name="user_Name">
               </label>
             </div>
 
             <div class="gender">
               <label>What is your gender?
                 <p>
-                  <select class="form-control" name="gender">
+                  <select class="form-control" name="gender_Select">
                     <option value="default"></option>
                     <option value="male">Male</option>
                     <option value="male">Female</option>
@@ -35,7 +36,7 @@
             <div class="pwd">
               <label>What is your password?
               <p>
-                <input class="form-control" type="password" name="pwd">
+                <input class="form-control" type="password" name="pass_Word">
               </p>
               </label>
             </div>
@@ -46,7 +47,7 @@
 
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="Tacos" value="">Tacos
+                <input type="checkbox" name="tacos" value="">Tacos
               </label>
             </div>
             <div class="checkbox">
@@ -61,24 +62,24 @@
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="Sandwiches" value="">Sandwiches
+                <input type="checkbox" name="sandwiches" value="">Sandwiches
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="Burgers" value="">Burgers
+                <input type="checkbox" name="burgers" value="">Burgers
               </label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" name="Fries" value="">Fries
+                <input type="checkbox" name="fries" value="">Fries
               </label>
             </div>
 
             <div class="OS">
               <label>Which operating system do you use?
                 <p>
-                  <select class="form-control" name="gender">
+                  <select class="form-control" name="os_Select">
                     <option value="default"></option>
                     <option value="Windows">Windows</option>
                     <option value="OSX">OSX</option>
@@ -91,7 +92,8 @@
             </div>
 
             <label>Do you have any questions?
-              <textarea class="form-control" name="questionForm"></textarea>
+              <textarea class="form-control" name="question_Form"></textarea><br>
+              <input class="form-control subButton" type="submit" name="submit_Form">
             </label>
           </div>
         </form>
